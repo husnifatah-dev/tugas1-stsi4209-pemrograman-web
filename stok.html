@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITTA UT - Informasi Stok</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Navigasi Menu -->
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="stok.html" style="background-color: #555;">Informasi Bahan Ajar</a></li>
+            <li><a href="tracking.html">Tracking Pengiriman</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Laporan &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="#">Monitoring Progress DO Bahan Ajar</a>
+                    <a href="#">Rekap Bahan Ajar</a>
+                </div>
+            </li>
+            
+            <li><a href="#">Histori Transaksi Bahan Ajar</a></li>
+            <li style="float:right"><a href="index.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama Stok -->
+    <div class="main-content">
+        <h2>Informasi Stok Bahan Ajar</h2>
+        
+        <!-- Form Tambah Stok Baru -->
+        <div class="form-tambah-stok">
+            <h3>Tambah Stok Baru</h3>
+            <form id="formTambahStok">
+                <div class="form-row">
+                    <input type="text" id="inputLokasi" placeholder="Kode Lokasi (Misal: 0SMG01)" required>
+                    <input type="text" id="inputKode" placeholder="Kode Barang (Misal: MSIM4302)" required>
+                    <input type="text" id="inputNama" placeholder="Nama Barang" required>
+                </div>
+                <div class="form-row">
+                    <input type="text" id="inputJenis" placeholder="Jenis (Misal: BMP)" required>
+                    <input type="number" id="inputEdisi" placeholder="Edisi (Angka)" required>
+                    <input type="number" id="inputStok" placeholder="Jumlah Stok" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: auto; padding: 10px 20px;">Tambah Data</button>
+            </form>
+        </div>
+
+        <!-- Tabel Menampilkan Data Dinamis -->
+        <div class="table-container">
+            <table class="stok-table">
+                <thead>
+                    <tr>
+                        <th>Kode Lokasi</th>
+                        <th>Kode Barang</th>
+                        <th>Nama Barang</th>
+                        <th>Jenis Barang</th>
+                        <th>Edisi</th>
+                        <th>Stok</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelBodyStok">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

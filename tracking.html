@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITTA UT - Tracking Pengiriman</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Navigasi Menu (Sama seperti dashboard) -->
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="stok.html">Informasi Bahan Ajar</a></li>
+            <li><a href="tracking.html" style="background-color: #555;">Tracking Pengiriman</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Laporan &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="#">Monitoring Progress DO Bahan Ajar</a>
+                    <a href="#">Rekap Bahan Ajar</a>
+                </div>
+            </li>
+            
+            <li><a href="#">Histori Transaksi Bahan Ajar</a></li>
+            <li style="float:right"><a href="index.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama Tracking -->
+    <div class="main-content">
+        <h2>Lacak Kiriman Bahan Ajar</h2>
+        
+        <div class="tracking-search">
+            <label for="noDO">No. DO/Billing: </label>
+            <input type="text" id="noDO" placeholder="Contoh: 2023001234">
+            <button id="btnCariDO" class="btn-primary btn-search">Cari</button>
+        </div>
+
+        <div id="trackingResult" class="tracking-result" style="display: none;">
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

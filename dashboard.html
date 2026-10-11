@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITTA UT - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Navigasi Menu -->
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="stok.html">Informasi Bahan Ajar</a></li>
+            <li><a href="tracking.html">Tracking Pengiriman</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Laporan &#9662;</a>
+                <div class="dropdown-content">
+                    <a href="#">Monitoring Progress DO Bahan Ajar</a>
+                    <a href="#">Rekap Bahan Ajar</a>
+                </div>
+            </li>
+            
+            <li><a href="#">Histori Transaksi Bahan Ajar</a></li>
+            
+            <li style="float:right"><a href="index.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama Dashboard -->
+    <div class="main-content">
+        <h2>Dashboard Aplikasi SITTA</h2>
+        <h3 id="greetingMessage">Selamat datang</h3>
+        <div class="dashboard-stats">
+            <div class="stat-box">Total Judul Buku: 5</div>
+            <div class="stat-box">Total Stok Tersedia: 1587</div>
+        </div>
+
+        <h4 style="margin-top: 30px; margin-bottom: 15px; color: #333; font-size: 18px;">Katalog Bahan Ajar (Terbaru)</h4>
+        
+        <div id="katalogDashboard" class="katalog-container"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
